@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 462504148}
   - component: {fileID: 462504149}
   - component: {fileID: 462504150}
+  - component: {fileID: 462504151}
   m_Layer: 0
   m_Name: hat
   m_TagString: Untagged
@@ -388,6 +389,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &462504151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462504147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8561c5a7319be144eb0410846fd62942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +560,7 @@ GameObject:
   - component: {fileID: 698262836}
   - component: {fileID: 698262837}
   - component: {fileID: 698262838}
+  - component: {fileID: 698262839}
   m_Layer: 0
   m_Name: hair
   m_TagString: Untagged
@@ -642,6 +656,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &698262839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698262835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8561c5a7319be144eb0410846fd62942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &706941897
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +679,7 @@ GameObject:
   - component: {fileID: 706941898}
   - component: {fileID: 706941899}
   - component: {fileID: 706941900}
+  - component: {fileID: 706941901}
   m_Layer: 0
   m_Name: tool
   m_TagString: Untagged
@@ -748,6 +775,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &706941901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706941897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8561c5a7319be144eb0410846fd62942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1227345213
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +798,7 @@ GameObject:
   - component: {fileID: 1227345214}
   - component: {fileID: 1227345215}
   - component: {fileID: 1227345216}
+  - component: {fileID: 1227345217}
   m_Layer: 0
   m_Name: toolEffect
   m_TagString: Untagged
@@ -854,6 +894,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1227345217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227345213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8561c5a7319be144eb0410846fd62942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1394761420
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +1001,7 @@ GameObject:
   - component: {fileID: 1753963251}
   - component: {fileID: 1753963252}
   - component: {fileID: 1753963253}
+  - component: {fileID: 1753963254}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -1044,6 +1097,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1753963254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753963250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8561c5a7319be144eb0410846fd62942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1822959198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1120,7 @@ GameObject:
   - component: {fileID: 1822959199}
   - component: {fileID: 1822959200}
   - component: {fileID: 1822959201}
+  - component: {fileID: 1822959202}
   m_Layer: 0
   m_Name: arms
   m_TagString: Untagged
@@ -1150,6 +1216,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1822959202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822959198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8561c5a7319be144eb0410846fd62942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2110283681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1240,7 @@ GameObject:
   - component: {fileID: 2110283683}
   - component: {fileID: 2110283682}
   - component: {fileID: 2110283685}
+  - component: {fileID: 2110283686}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1242,6 +1321,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8e78b3a843fb94ea474ead7274c3db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2110283686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110283681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9adb183f7e74e73b2d6318f8e41e099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xInput: 0
+  yInput: 0
+  isIdle: 0
+  isCarrying: 0
+  isWalking: 0
+  isRunning: 0
+  toolEffect: 0
+  isUsingToolRight: 0
+  isUsingToolLeft: 0
+  isUsingToolUp: 0
+  isUsingToolDown: 0
+  isLiftingToolRight: 0
+  isLiftingToolLeft: 0
+  isLiftingToolUp: 0
+  isLiftingToolDown: 0
+  isSwingingToolRight: 0
+  isSwingingToolLeft: 0
+  isSwingingToolUp: 0
+  isSwingingToolDown: 0
+  isPickingRight: 0
+  isPickingLeft: 0
+  isPickingUp: 0
+  isPickingDown: 0
+  idleUp: 0
+  idleDown: 0
+  idleLeft: 0
+  idleRight: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
