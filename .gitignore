@@ -105,3 +105,6 @@ Assets/Fonts*
 Assets/Sounds*
 Assets/Sprites*
 Assets/Tilemap*
+
+# Rider file
+.idea/
