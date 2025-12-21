@@ -108,3 +108,5 @@ Assets/Tilemap*
 
 # Rider file
 .idea/
+# Microsoft Visual Studio flies
+.vsconfig
