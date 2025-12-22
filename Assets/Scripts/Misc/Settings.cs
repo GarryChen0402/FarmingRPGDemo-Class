@@ -3,6 +3,11 @@
 
 public static class Settings
 {
+    // Obscuring Item Fading  - ObscuringItemFader
+    public const float fadeInSeconds = 0.25f;
+    public const float fadeOutSconds = 0.35f;
+    public const float targetAlpha = 0.45f;
+
     // Player Movement
     public const float RunningSpeed = 5.33f;
     public const float WalkingSpeed = 2.66f;
