@@ -1,15 +1,31 @@
-﻿public enum ToolEffect
+﻿
+public enum ToolEffect
 {
-    none,
-    watering,
+    None,
+    Watering,
     
 }
 
 public enum Direction
 {
-    up,
-    down,
-    right,
-    left,
-    none,
+    Up,
+    Down,
+    Right,
+    Left,
+    None,
+}
+
+public enum ItemType
+{
+    Seed,
+    Commodity,
+    WateringTool,
+    HoeingTool,
+    ChoppingTool,
+    BreakingTool,
+    ReapingTool,
+    CollectingTool,
+    ReapableScenary,
+    None,
+    Count, // An enum for count the number of item type
 }

@@ -10,7 +10,7 @@ public class Player : SingletonMonoBehaviour<Player>
     private bool isCarrying;
     private bool isWalking;
     private bool isRunning;
-    private ToolEffect toolEffect = ToolEffect.none;
+    private ToolEffect toolEffect = ToolEffect.None;
     private bool isUsingToolRight;
     private bool isUsingToolLeft;
     private bool isUsingToolUp;
@@ -122,7 +122,7 @@ public class Player : SingletonMonoBehaviour<Player>
         isPickingLeft = false;
         isPickingUp = false;
         isPickingDown = false;
-        toolEffect = ToolEffect.none;
+        toolEffect = ToolEffect.None;
     }
 
     private void PlayerMovementInputs()
@@ -143,10 +143,10 @@ public class Player : SingletonMonoBehaviour<Player>
             isIdle = false;
             movementSpeed = Settings.RunningSpeed;
 
-            if (xInput < 0) playerDirection = Direction.left;
-            else if (xInput > 0) playerDirection = Direction.right;
-            else if (yInput < 0) playerDirection = Direction.down;
-            else playerDirection = Direction.up;
+            if (xInput < 0) playerDirection = Direction.Left;
+            else if (xInput > 0) playerDirection = Direction.Right;
+            else if (yInput < 0) playerDirection = Direction.Down;
+            else playerDirection = Direction.Up;
         }
         else if (xInput == 0 && yInput == 0)
         {
