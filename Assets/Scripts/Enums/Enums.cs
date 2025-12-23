@@ -26,6 +26,7 @@ public enum ItemType
     ReapingTool,
     CollectingTool,
     ReapableScenary,
+    Furniture,
     None,
     Count, // An enum for count the number of item type
 }
