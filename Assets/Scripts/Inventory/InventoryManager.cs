@@ -173,4 +173,20 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
             inventoryList.RemoveAt(itemPosition);
         }
     }
+
+    public void SwapInventoryItems(InventoryLoaction inventoryLoaction, int fromItem, int toItem)
+    {
+        if(fromItem < inventoryLists[(int)inventoryLoaction].Count && toItem < inventoryLists[(int)inventoryLoaction].Count
+            && fromItem != toItem && fromItem >= 0 && toItem >= 0)
+        {
+            InventoryItem fromInventoryItem = inventoryLists[(int)inventoryLoaction][fromItem];
+            InventoryItem toInventoryItem = inventoryLists[(int)inventoryLoaction][toItem];
+
+            inventoryLists[(int)inventoryLoaction][toItem] = fromInventoryItem;
+            inventoryLists[(int)inventoryLoaction][fromItem] = toInventoryItem;
+
+            EventHandler.CallInventoryUpdatedEvent(inventoryLoaction, inventoryLists[(int)inventoryLoaction]);
+
+        }
+    }
 }
