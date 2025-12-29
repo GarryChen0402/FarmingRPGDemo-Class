@@ -145,4 +145,32 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
         }
         return null;
     }
+
+    public void RemoveItem(InventoryLoaction inventoryLocation, int itemCode)
+    {
+        List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
+
+        int itemPosition = FindItemInInventory(inventoryLocation, itemCode);
+        if (itemPosition != -1) RemoveItemAtPosition(inventoryList, itemCode, itemPosition);
+        EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryLists[(int)inventoryLocation]);
+    }
+
+    private void RemoveItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int itemPosition)
+    {
+        //throw new NotImplementedException();
+        InventoryItem inventoryItem = new InventoryItem();
+
+        int quantity = inventoryList[itemPosition].itenQuantity - 1;
+
+        if(quantity > 0)
+        {
+            inventoryItem.itenQuantity = quantity;
+            inventoryItem.itemCode = itemCode;
+            inventoryList[itemPosition] = inventoryItem;
+        }
+        else
+        {
+            inventoryList.RemoveAt(itemPosition);
+        }
+    }
 }

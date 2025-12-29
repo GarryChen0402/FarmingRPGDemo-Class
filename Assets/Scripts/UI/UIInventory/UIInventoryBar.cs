@@ -8,6 +8,8 @@ public class UIInventoryBar : MonoBehaviour
     [SerializeField] private Sprite blank16x16sprite = null;
     [SerializeField] private UIInventorySlot[] inventorySlot = null;
 
+    public GameObject inventoryBarDraggedItem;
+
     private RectTransform rectTransform;
 
     private bool _isInventoryBarPositionBottom = true;
