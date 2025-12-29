@@ -27,6 +27,15 @@ public class Item : MonoBehaviour
 
     public void Init(int itemCodeParams)
     {
+        if(itemCodeParams != 0)
+        {
+            ItemCode = itemCodeParams;
+            ItemDetails itemDetails = InventoryManager.Instance.GetItemDetails(ItemCode);
 
+            spriteRenderer.sprite = itemDetails.itemSprite;
+
+            if (itemDetails.itemType == ItemType.ReapableScenary)
+                gameObject.AddComponent<ItemNudge>();
+        }
     }
 }
