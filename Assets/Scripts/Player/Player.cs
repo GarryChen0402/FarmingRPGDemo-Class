@@ -34,6 +34,8 @@ public class Player : SingletonMonoBehaviour<Player>
 
     private Rigidbody2D _rigidbody2D;
 
+    private Camera mainCamera;
+
 #pragma warning disable 414
     private Direction playerDirection;
 #pragma warning restore 414
@@ -53,6 +55,8 @@ public class Player : SingletonMonoBehaviour<Player>
         base.Awake();
 
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        // get the reference to main camera
+        mainCamera = Camera.main;
     }
 
     private void Update()
@@ -154,5 +158,10 @@ public class Player : SingletonMonoBehaviour<Player>
             isWalking = false;
             isIdle = true;
         }
+    }
+
+    public Vector3 GetPlayerViewportPosition()
+    {
+        return mainCamera.WorldToViewportPoint(transform.position);
     }
 }
