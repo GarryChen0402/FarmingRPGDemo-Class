@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class UIInventoryBar : MonoBehaviour
 {
+    [SerializeField] private Sprite blank16x16sprite = null;
+    [SerializeField] private UIInventorySlot[] inventorySlot = null;
+
     private RectTransform rectTransform;
 
     private bool _isInventoryBarPositionBottom = true;
@@ -18,6 +21,62 @@ public class UIInventoryBar : MonoBehaviour
     private void Update()
     {
         SwitchInventoryBarPosition();
+    }
+
+    private void OnEnable()
+    {
+        EventHandler.InventoryUpdatedEvent += InventoryUpdated;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.InventoryUpdatedEvent -= InventoryUpdated;
+    }
+
+    private void InventoryUpdated(InventoryLoaction loaction, List<InventoryItem> list)
+    {
+        if(loaction == InventoryLoaction.Player)
+        {
+            ClearInventorySlots();
+
+            if(inventorySlot.Length > 0 && list.Count > 0)
+            {
+                for(int i=0;i<inventorySlot.Length;i++)
+                {
+                    if(i < list.Count)
+                    {
+                        int itemCode = list[i].itemCode;
+
+                        ItemDetails itemDetails = InventoryManager.Instance.GetItemDetails(itemCode);
+
+                        if(itemDetails != null)
+                        {
+                            inventorySlot[i].inventorySlotImage.sprite = itemDetails.itemSprite;
+                            inventorySlot[i].textMeshProUGUI.text = list[i].itenQuantity.ToString();
+                            inventorySlot[i].itemDetails = itemDetails;
+                            inventorySlot[i].itemQuantity = list[i].itenQuantity;
+                        }
+                    }else
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    private void ClearInventorySlots()
+    {
+        if(inventorySlot.Length > 0)
+        {
+            for(int i = 0; i < inventorySlot.Length; i++)
+            {
+                inventorySlot[i].inventorySlotImage.sprite = blank16x16sprite;
+                inventorySlot[i].textMeshProUGUI.text = "";
+                inventorySlot[i].itemDetails = null;
+                inventorySlot[i].itemQuantity = 0;
+            }
+        }
     }
 
     private void SwitchInventoryBarPosition()

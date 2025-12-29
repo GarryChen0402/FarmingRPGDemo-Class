@@ -71,7 +71,7 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
         inventoryItem.itenQuantity = 1;
         inventoryList.Add(inventoryItem);
 
-        DebugPrintInventoryList(inventoryList);
+        //DebugPrintInventoryList(inventoryList);
     }
 
     private void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int itemPosition)
@@ -84,18 +84,18 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
         inventoryList[itemPosition] = inventoryItem;
 
         Debug.ClearDeveloperConsole();
-        DebugPrintInventoryList(inventoryList);
+        //DebugPrintInventoryList(inventoryList);
     }
 
 
-    private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
-    {
-        foreach (InventoryItem item in inventoryList)
-        {
-            Debug.Log("Item description : " + InventoryManager.Instance.GetItemDetails(item.itemCode).itemDescription + "  Item Quantity: " + item.itenQuantity);
-        }
-        Debug.Log("*********************************************************************");
-    }
+    //private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
+    //{
+    //    foreach (InventoryItem item in inventoryList)
+    //    {
+    //        Debug.Log("Item description : " + InventoryManager.Instance.GetItemDetails(item.itemCode).itemDescription + "  Item Quantity: " + item.itenQuantity);
+    //    }
+    //    Debug.Log("*********************************************************************");
+    //}
 
     /// <summary>
     /// Find if an itemCode  is already in the inventory. Returns the item position
