@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot6
@@ -393,6 +397,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot8
@@ -736,6 +744,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot7
@@ -1243,6 +1255,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot1
@@ -1496,6 +1512,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot10
@@ -1736,6 +1756,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot9
@@ -1857,6 +1881,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot3
@@ -2062,6 +2090,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot4
@@ -2183,6 +2215,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot11
@@ -2557,6 +2593,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot5
@@ -2896,6 +2936,7 @@ MonoBehaviour:
   - {fileID: 1223299242}
   - {fileID: 1502163435}
   inventoryBarDraggedItem: {fileID: 4510072259206887708, guid: 6cd2b253bb5b2c749a95abbe37137555, type: 3}
+  inventoryTextBoxGameobject: {fileID: 0}
 --- !u!1001 &1955801970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2912,6 +2953,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot2
@@ -3233,6 +3278,10 @@ PrefabInstance:
       propertyPath: inventoryBar
       value: 
       objectReference: {fileID: 1843816695}
+    - target: {fileID: -192703891333246046, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
+      propertyPath: inventoryTextBoxPrefab
+      value: 
+      objectReference: {fileID: 7592548327710914803, guid: 60fec80b7fa230a4bb2c1aea424b2bef, type: 3}
     - target: {fileID: 2039185781934677681, guid: d77e1491d35840643bc2b9ff66d0f6dd, type: 3}
       propertyPath: m_Name
       value: UIInventorySlot0

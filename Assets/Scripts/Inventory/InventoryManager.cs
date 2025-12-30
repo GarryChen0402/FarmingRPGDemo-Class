@@ -189,4 +189,37 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
 
         }
     }
+
+    public string GetItemTypeDescription(ItemType itemType)
+    {
+        string itemTypeDescription = "None Type";
+        switch (itemType)
+        {
+            case ItemType.BreakingTool:
+                itemTypeDescription = Settings.BreakingTool;
+                break;
+            case ItemType.ChoppingTool:
+                itemTypeDescription = Settings.ChoppingTool;
+                break;
+            case ItemType.HoeingTool:
+                itemTypeDescription = Settings.HoeingTool;
+                break;
+            case ItemType.ReapingTool:
+                itemTypeDescription = Settings.ReapingTool;
+                break;
+            case ItemType.WateringTool:
+                itemTypeDescription = Settings.WateringTool;
+                break;
+            case ItemType.CollectingTool:
+                itemTypeDescription = Settings.CollectingTool;
+                break;
+
+            default:
+                itemTypeDescription = itemType.ToString();
+                break;
+        }
+
+        return itemTypeDescription;
+    }
+
 }

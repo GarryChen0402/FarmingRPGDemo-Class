@@ -10,6 +10,8 @@ public class UIInventoryBar : MonoBehaviour
 
     public GameObject inventoryBarDraggedItem;
 
+    [HideInInspector] public GameObject inventoryTextBoxGameobject = null;
+
     private RectTransform rectTransform;
 
     private bool _isInventoryBarPositionBottom = true;
