@@ -59,6 +59,8 @@ public class UIInventoryBar : MonoBehaviour
                             inventorySlot[i].textMeshProUGUI.text = list[i].itenQuantity.ToString();
                             inventorySlot[i].itemDetails = itemDetails;
                             inventorySlot[i].itemQuantity = list[i].itenQuantity;
+
+                            SetHighlightedInventorySlots(i);
                         }
                     }else
                     {
@@ -79,6 +81,8 @@ public class UIInventoryBar : MonoBehaviour
                 inventorySlot[i].textMeshProUGUI.text = "";
                 inventorySlot[i].itemDetails = null;
                 inventorySlot[i].itemQuantity = 0;
+
+                SetHighlightedInventorySlots(i);
             }
         }
     }
@@ -103,6 +107,45 @@ public class UIInventoryBar : MonoBehaviour
             rectTransform.anchoredPosition = new Vector2(0f, -2.5f);
 
             IsInventoryBarPositionBottom = false;
+        }
+    }
+
+    public void ClearHighlightOnInventorySlots()
+    {
+        if(inventorySlot.Length > 0)
+        {
+            for(int i=0;i<inventorySlot.Length;i++)
+            {
+                if (inventorySlot[i].isSelected)
+                {
+                    inventorySlot[i].isSelected = false;
+                    inventorySlot[i].inventorySlotHightlight.color = new Color(0f, 0f, 0f, 0f);
+
+                    InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLoaction.Player);
+                }
+            }
+        }
+    }
+
+    public void SetHighlightedInventorySlots()
+    {
+        if(inventorySlot.Length > 0)
+        {
+            for (int i = 0; i < inventorySlot.Length; i++)
+                SetHighlightedInventorySlots(i);
+        }
+    }
+
+    public void SetHighlightedInventorySlots(int itemPosition)
+    {
+        if(inventorySlot.Length > 0 && inventorySlot[itemPosition].itemDetails != null)
+        {
+            if (inventorySlot[itemPosition].isSelected)
+            {
+                inventorySlot[itemPosition].inventorySlotHightlight.color = new Color(1f, 1f, 1f, 1f);
+
+                InventoryManager.Instance.SetSelectedInventoryItem(InventoryLoaction.Player, inventorySlot[itemPosition].itemDetails.itemCode);
+            }
         }
     }
 }

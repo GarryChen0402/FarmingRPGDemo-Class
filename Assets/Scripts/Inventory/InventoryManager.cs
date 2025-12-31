@@ -7,6 +7,8 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
 {
     private Dictionary<int, ItemDetails> itemDetailsDictionary;
 
+    private int[] selectedInventoryItem;
+
     public List<InventoryItem>[] inventoryLists;
 
     [HideInInspector] // the index of the array is the inventory list (from the InventoryLocation enum), and the value is the capacity of that inventory list;
@@ -23,6 +25,13 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
         CreateInventoryLists();
 
         CreateItemDetailsDictionary();
+
+        selectedInventoryItem = new int[(int)InventoryLoaction.Count];
+
+        for(int i = 0; i < selectedInventoryItem.Length; i++)
+        {
+            selectedInventoryItem[i] = -1;
+        }
     }
 
     private void CreateInventoryLists()
@@ -105,7 +114,7 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
     /// <param name="itemCode"></param>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    private int FindItemInInventory(InventoryLoaction inventoryLocation, int itemCode)
+    public int FindItemInInventory(InventoryLoaction inventoryLocation, int itemCode)
     {
         List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
 
@@ -222,4 +231,13 @@ public class InventoryManager : SingletonMonoBehaviour<InventoryManager>
         return itemTypeDescription;
     }
 
+    public void SetSelectedInventoryItem(InventoryLoaction inventoryLoaction, int itemCode)
+    {
+        selectedInventoryItem[(int)inventoryLoaction] = itemCode;
+    }
+
+    public void ClearSelectedInventoryItem(InventoryLoaction inventoryLocation)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = -1;
+    }
 }
