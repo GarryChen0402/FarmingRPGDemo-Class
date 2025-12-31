@@ -62,7 +62,7 @@ MonoBehaviour:
     itemUseRadius: 0
     isStartingItem: 1
     canBePickedUp: 1
-    canBeDropped: 1
+    canBeDropped: 0
     canBeEaten: 0
     canBeCarried: 1
   - itemCode: 10004
