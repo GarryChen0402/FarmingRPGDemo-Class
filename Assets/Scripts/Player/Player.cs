@@ -89,6 +89,8 @@ public class Player : SingletonMonoBehaviour<Player>
 
             PlayerWalkInput();
 
+            PlayerTestInput();
+
             EventHandler.CallMovementEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
                 isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
                 isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown, isPickingRight,
@@ -243,5 +245,13 @@ public class Player : SingletonMonoBehaviour<Player>
         characterAttributeCustomisationList.Add(armsCharacterAttribute);
         animationOverrides.ApplyCharacterCustomisationParameters(characterAttributeCustomisationList);
         isCarrying = false;
+    }
+
+    //TODO: Remove
+    private void PlayerTestInput()
+    {
+        if (Input.GetKey(KeyCode.T)) TimeManager.Instance.TestAdvanceGameMinute();
+
+        if(Input.GetKey(KeyCode.G))TimeManager.Instance.TestAdvanceGameDay();
     }
 }
