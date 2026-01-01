@@ -90,4 +90,11 @@ public static class EventHandler
             AdvanceGameYearEvent(gameYear, gameSeason, gameDay, gameDayOfWeek, gameHour, gameMinute, gameSecond);
     }
 
+    // Scene Load Events - in the order they happen
+
+    //Before Scene Unload Fade Out Event
+    public static event Action BeforeSceneUnloadFadeOutEvent;
+
+
+
 }
