@@ -101,3 +101,14 @@ public enum PartVariantType
     wateringCan,
     Count
 }
+
+public enum Season
+{
+    Spring,
+    Summer,
+    Autumn,
+    Winter,
+    none,
+    Count
+
+}

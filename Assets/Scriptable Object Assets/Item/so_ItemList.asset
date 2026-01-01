@@ -64,7 +64,7 @@ MonoBehaviour:
     canBePickedUp: 1
     canBeDropped: 0
     canBeEaten: 0
-    canBeCarried: 1
+    canBeCarried: 0
   - itemCode: 10004
     itemType: 3
     itemDescription: 'A Basic Hoe '
