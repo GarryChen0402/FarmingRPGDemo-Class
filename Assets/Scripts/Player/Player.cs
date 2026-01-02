@@ -253,5 +253,8 @@ public class Player : SingletonMonoBehaviour<Player>
         if (Input.GetKey(KeyCode.T)) TimeManager.Instance.TestAdvanceGameMinute();
 
         if(Input.GetKey(KeyCode.G))TimeManager.Instance.TestAdvanceGameDay();
+
+        if (Input.GetKey(KeyCode.L)) SceneControllerManager.Instance.FadeAndLoadScene(SceneName.Scene1_Farm.ToString(), transform.position);
+
     }
 }

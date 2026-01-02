@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor;
 
 public delegate void MovementDelegate(float inputX, float inputY, bool isWalking, 
     bool isRunning, bool isIdle, bool isCarrying, ToolEffect toolEffect,
@@ -95,6 +96,39 @@ public static class EventHandler
     //Before Scene Unload Fade Out Event
     public static event Action BeforeSceneUnloadFadeOutEvent;
 
+    public static void CallBeforeSceneUnloadFadeOutEvent()
+    {
+        BeforeSceneUnloadFadeOutEvent?.Invoke();
+    }
 
+    public static event Action BeforeSceneUnloadEvent;
+
+    public static void CallBeforeSceneUnloadEvent()
+    {
+        BeforeSceneUnloadEvent?.Invoke();
+    }
+
+    public static event Action AfterSceneUnloadEvent;
+
+    public static void CallAfterSceneUnloadEvent()
+    {
+        AfterSceneUnloadEvent?.Invoke();
+    }
+
+    public static event Action AfterSceneLoadEvent;
+
+    public static void CallAfterSceneLoadedEvent()
+    {
+        AfterSceneLoadEvent?.Invoke();
+    }
+
+
+
+    public static event Action AfterSceneLoadFadeInEvent;
+
+    public static void CallAfterSceneLoadFadeInEvent()
+    {
+        AfterSceneLoadFadeInEvent?.Invoke();
+    }
 
 }
