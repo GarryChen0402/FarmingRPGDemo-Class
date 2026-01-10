@@ -1,0 +1,18 @@
+using System.Runtime.InteropServices.WindowsRuntime;
+using UnityEngine;
+[System.Serializable]
+public class GridCoordinate : MonoBehaviour
+{
+    public int x, y;
+
+    public GridCoordinate(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+
+    public static explicit operator Vector2(GridCoordinate gridCoordinate) => new Vector2((float)gridCoordinate.x, (float)gridCoordinate.y);
+    public static explicit operator Vector2Int(GridCoordinate gridCoordinate) => new Vector2Int(gridCoordinate.x, gridCoordinate.y);
+    public static explicit operator Vector3(GridCoordinate gridCoordinate) => new Vector3((float)gridCoordinate.x, (float)gridCoordinate.y, 0f);
+    public static explicit operator Vector3Int(GridCoordinate gridCoordinate) => new Vector3Int(gridCoordinate.x, gridCoordinate.y, 0); 
+}
