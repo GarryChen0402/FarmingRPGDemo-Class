@@ -21,4 +21,9 @@ public class Vector3Serializable
         this.y = vector3.y;
         this.z = vector3.z;
     }
+
+    public Vector3 GetVector3()
+    {
+        return new Vector3(x, y, z);
+    }
 }

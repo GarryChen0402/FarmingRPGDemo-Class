@@ -1,0 +1,100 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(GenerateGUID))]
+public class SceneItemsManager : SingletonMonoBehaviour<SceneItemsManager>, ISaveable
+{
+    private Transform parentItem;
+    [SerializeField] private GameObject itemPrefab = null;
+
+    private string _iSaveableUniqueID;
+    public string ISaveableUniqueID { get => _iSaveableUniqueID; set => _iSaveableUniqueID = value; }
+
+    private GameObjecttSave _gameObjectSave;
+    public GameObjecttSave GameObjectSave {  get => _gameObjectSave; set => _gameObjectSave = value; }
+
+    private void AfterSceneLoad() => parentItem = GameObject.FindGameObjectWithTag(Tags.ItemsParentTransform).transform;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        ISaveableUniqueID = GetComponent<GenerateGUID>().GUID;
+        GameObjectSave = new GameObjecttSave();
+    }
+
+    private void DestorySceneItems()
+    {
+        Item[] itemInScene = GameObject.FindObjectsOfType<Item>();
+        for(int i = 0; i < itemInScene.Length; i++)
+        {
+            Destroy(itemInScene[i].gameObject);
+        }
+    }
+
+    public void InstantiateSceneItem(int itemCode, Vector3 itemPosition)
+    {
+        GameObject itemGameObject = Instantiate(itemPrefab, itemPosition, Quaternion.identity, parentItem);
+        itemGameObject.GetComponent<Item>().Init(itemCode);
+    }
+
+    private void InstantiateSceneItems(List<SceneItem> sceneItemList)
+    {
+        GameObject itemGameObject;
+        foreach(SceneItem sceneItem in sceneItemList)
+        {
+            itemGameObject = Instantiate(itemPrefab, sceneItem.position.GetVector3(), Quaternion.identity, parentItem);
+            Item item = itemGameObject.GetComponent<Item>();
+            item.ItemCode = sceneItem.itemCode;
+            item.name = sceneItem.itemName;
+        }
+    }
+
+    private void OnDisable()
+    {
+        ISaveableDeregister();
+        EventHandler.AfterSceneLoadEvent -= AfterSceneLoad;
+    }
+
+    private void OnEnable()
+    {
+        ISaveableRegister();
+        EventHandler.AfterSceneLoadEvent += AfterSceneLoad;
+    }
+
+    public void ISaveableDeregister() => SaveLoadManager.Instance.iSaveableObjectList.Remove(this);
+
+    public void ISaveableRegister() => SaveLoadManager.Instance.iSaveableObjectList.Add(this);
+    public void IsaveableStoreScene(string sceneName)
+    {
+        GameObjectSave.sceneData.Remove(sceneName);
+        List<SceneItem> sceneItemList = new List<SceneItem>();
+        Item[] itemsInScene = FindObjectsOfType<Item>();
+        foreach(Item item in itemsInScene)
+        {
+            SceneItem sceneItem = new SceneItem();
+            sceneItem.itemCode = item.ItemCode;
+            sceneItem.position = new Vector3Serializable(item.transform.position);
+            sceneItem.itemName = item.name;
+
+            sceneItemList.Add(sceneItem);
+        }
+
+        SceneSave sceneSave = new SceneSave();
+        sceneSave.listSceneItemDictionary = new Dictionary<string, List<SceneItem>>();
+        sceneSave.listSceneItemDictionary.Add("sceneItemList", sceneItemList);
+        GameObjectSave.sceneData.Add(sceneName, sceneSave);
+    }
+
+    public void ISavableRestoreScene(string sceneName)
+    {
+        if(GameObjectSave.sceneData.TryGetValue(sceneName, out SceneSave sceneSave))
+        {
+            if(sceneSave.listSceneItemDictionary != null && sceneSave.listSceneItemDictionary.TryGetValue("sceneItemList", out List<SceneItem> sceneItemList))
+            {
+                DestorySceneItems();
+                InstantiateSceneItems(sceneItemList);
+            }
+        }
+    }
+}
