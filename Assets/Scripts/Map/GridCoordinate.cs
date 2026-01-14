@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 [System.Serializable]
-public class GridCoordinate : MonoBehaviour
+public class GridCoordinate
 {
     public int x, y;
 
