@@ -4,5 +4,6 @@ using UnityEngine;
 [System.Serializable]
 public class SceneSave
 {
-    public Dictionary<string, List<SceneItem>> listSceneItemDictionary;
+    public List<SceneItem> listSceneItem;
+    //public Dictionary<string, GridP>
 }
